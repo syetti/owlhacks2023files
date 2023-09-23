@@ -45,19 +45,35 @@ function ReadEvents() {
   }, []);
 
   return (
-    <div className='eventboard'>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        events.map((toilet, index) => (
+    <div className='read-events-container'>
+      <div className='filter-options'>
+        <label>
+          ADA Accessible
+          <input
+            type='checkbox'
+            checked={adaFilter}
+            onChange={() => setAdaFilter(!adaFilter)}
+          />
+        </label>
+        <label>
+          Unisex
+          <input
+            type='checkbox'
+            checked={unisexFilter}
+            onChange={() => setUnisexFilter(!unisexFilter)}
+          />
+        </label>
+      </div>
+      <div className='eventboard'>
+        {events.map((toilet, index) => (
           <Event
             key={index}
             name={toilet.name}
-            description={toilet.description}
-            date={toilet.updated_at} // You can customize this part based on the data structure
+            description={toilet.directions}
+            date={toilet.updated_at}
           />
-        ))
-      )}
+        ))}
+      </div>
     </div>
   );
 }
