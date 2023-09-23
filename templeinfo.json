@@ -1,0 +1,59 @@
+
+{
+    "Event-Name": "Mindfulness Monday (In Person)",
+    "Location": "Social Service Annex, Ritter Annex Basement, 1301 Cecil B. Moore, Philadelphia, Pa",
+    "Time": new Date("2023-09-25T11:00:00Z"),
+    "Type": "Temple",
+    "Description": "Social Service Annex staff will lead students on a relaxing journey to start off the week! "
+}
+
+{
+    "Event-Name": "Owl About Self-Care",
+    "Location": "Howard Gittis Student Center 201 | Wellness Resource Center    ",
+    "Time": new Date("2023-09-25T15:00:00Z"),
+    "Type": "Temple",
+    "Description": "What is self-care? This program takes a deeper dive into how a proactive and regular practice can help manage stress. We'll take a look at the different aspects that can make up self-care and spend time creating individualized plans.    "
+}
+{
+    "Event-Name": "PERIOD - Bake Sale",
+    "Location": "HGSC Atrium",
+    "Time": new Date("2023-09-25T13:00:00Z"),
+    "Type": "Temple",
+    "Description": "Join us September 25th from 1-4pm in the SAC to raise money and awareness for Period Poverty! We’ll be selling many baked goods donated by our members to raise funds towards buying menstrual hygiene products to donate to local shelters in the North Philly Community. There will be a variety of baked goods including Gluten Free options as well!! "
+}
+{
+    "Event-Name": "STARs Workshop - Sexualized Hazing Prevention",
+    "Location": "HGSC 200B, 1755 N 13th Street",
+    "Time": new Date("2023-09-25T16:00:00Z"),
+    "Type": "Temple",
+    "Description": "Join Dr. McKee from the College of Public Health and learn about Hazing Prevention strategies. Dr. McKee's is a College Professor | Public Health | Hazing Prevention Specialist | Researcher | 20 Years of Experience in Higher Education.    "
+}
+{
+    "Event-Name": "Campus Rec: Monday Group Fitness sessions at the IBC
+    ",
+    "Location": "IBC Student Rec Center",
+    "Time": new Date("2023-09-25T9:00:00Z"),
+    "Type": "Temple",
+    "Description": "Group fitness is group exercise sessions led by a certified leader who creates a session plan to accommodate various fitness levels. Exercising in these group settings is a great way to meet others, make connections and utilize certified fitness knowledge.     "
+}
+{
+    "Event-Name": "",
+    "Location": "",
+    "Time": new Date("2023-09-23T13:00:00Z"),
+    "Type": "Temple",
+    "Description": ""
+}
+{
+    "Event-Name": "",
+    "Location": "",
+    "Time": new Date("2023-09-23T13:00:00Z"),
+    "Type": "Temple",
+    "Description": ""
+}
+{
+    "Event-Name": "",
+    "Location": "",
+    "Time": new Date("2023-09-23T13:00:00Z"),
+    "Type": "Temple",
+    "Description": ""
+}
