@@ -1,19 +1,29 @@
-import { useState } from 'react'
-import Event from './components/Event'
-import './App.css'
+// App.js
+import { useAuth0 } from "@auth0/auth0-react";
+import "./App.css";
+import Logout from "./components/Logout";
+import User from "./components/User";
+import Login from "./components/Login";
+import ReadEvents from "./pages/ReadEvents";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const { isAuthenticated } = useAuth0();
   return (
-    <>
-      <div>
-      
-      <Event name="Drexel Event" description="Its fun" date="9/25/23"/>
-      <Event name="Temple Event" description="Its less fun" date="9/26/23"/>
-      </div>
-    </>
-  )
+    <div className="App">
+      {!isAuthenticated ? (
+        <div>
+          <p>Login.</p>
+          <Login />
+        </div>
+      ) : (
+        <div>
+          <ReadEvents />
+          <Logout />
+          <User />
+        </div>
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
