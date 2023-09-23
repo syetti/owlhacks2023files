@@ -3,7 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Login from "./Login";
 import User from "./User";
 import Logout from "./Logout";
-import { Nav, Navbar, Container } from "react-bootstrap";
+import { Nav, Navbar, Container, Button } from "react-bootstrap";
 
 const CustomNav = () => {
   const { isAuthenticated } = useAuth0();
@@ -18,8 +18,8 @@ const CustomNav = () => {
             <Nav.Link href="/">Home</Nav.Link>
           </Nav>
           <Nav className="auth-buttons">
-            {isAuthenticated ? <Logout /> : <Login />}
-            {isAuthenticated && <Nav.Link href="/user">User</Nav.Link>}
+            {!isAuthenticated && <Login />}
+            {isAuthenticated && <Nav.Link href="/user">Profile</Nav.Link>}
           </Nav>
         </Navbar.Collapse>
       </Container>
