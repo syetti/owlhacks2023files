@@ -1,0 +1,4 @@
+.eventboard {
+    display: flex;
+    flex-wrap: wrap;
+  }

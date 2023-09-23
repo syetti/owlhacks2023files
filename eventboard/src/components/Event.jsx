@@ -9,6 +9,9 @@ const Event = (props) => {
             <p className="name">{props.name}</p>
             <p>{props.description}</p>
             <p>{props.date}</p>
+            <p>{props.location}</p>
+            <p>{props.image}</p>
+
             </Link>
         </div>
     )
