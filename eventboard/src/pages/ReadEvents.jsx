@@ -5,56 +5,59 @@ import axios from 'axios';
 
 function ReadEvents() {
   const [events, setEvents] = useState([]);
-  const searchQuery = 'ADA accessible restroom'; // Your search query
-
-  // Add request interceptor to log requests
-  axios.interceptors.request.use((request) => {
-    console.log('Request:', request);
-    return request;
-  });
-
-  // Add response interceptor to log responses
-  axios.interceptors.response.use((response) => {
-    console.log('Response:', response);
-    return response;
-  });
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Define an async function to fetch ADA accessible toilets with a search query
-    const fetchAccessibleToilets = async () => {
-      try {
-        const response = await axios.get('https://www.refugerestrooms.org/api/v1/restrooms.json', {
-          params: {
-            ada: true, // Filter for ADA accessible toilets
-            query: searchQuery, // Your search query
-            per_page: 50,
-          },
-        });
+    const searchQuery = 'ADA accessible restroom'; // Your search query
 
-        const toiletData = response.data;
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        const lat = position.coords.latitude;
+        const long = position.coords.longitude;
 
-        setEvents(toiletData);
+        console.log(`Latitude: ${lat}, Longitude: ${long}`);
 
-        // Log the JSON data
-        console.log('Toilet Data:', toiletData);
-      } catch (error) {
-        console.error('Error fetching toilet data:', error);
-      }
-    };
+        const baseUrl = 'https://www.refugerestrooms.org/api/v1/restrooms/by_location';
+        const queryParams = {
+          page: 1,
+          per_page: 10,
+          offset: 0,
+          lat: lat,
+          lng: long,
+        };
 
-    fetchAccessibleToilets();
+        axios.get(baseUrl, {
+          params: queryParams,
+        })
+          .then(function (response) {
+            setEvents(response.data);
+            setLoading(false);
+          })
+          .catch(function (error) {
+            console.error(error);
+            setLoading(false);
+          });
+      });
+    } else {
+      console.error('Geolocation is not supported by your browser.');
+      setLoading(false); // Make sure to set loading to false if geolocation is not supported
+    }
   }, []);
 
   return (
     <div className='eventboard'>
-      {events.map((toilet, index) => (
-        <Event
-          key={index}
-          name={toilet.name}
-          description={toilet.description}
-          date={toilet.updated_at} // You can customize this part based on the data structure
-        />
-      ))}
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        events.map((toilet, index) => (
+          <Event
+            key={index}
+            name={toilet.name}
+            description={toilet.description}
+            date={toilet.updated_at} // You can customize this part based on the data structure
+          />
+        ))
+      )}
     </div>
   );
 }
