@@ -3,7 +3,9 @@ import Event from '../components/Event'
 import './ReadEvents.css'
 
 function ReadEvents() {
+    const [events, setEvents] = useState([]);
 
+   
 
   return (
     <>
