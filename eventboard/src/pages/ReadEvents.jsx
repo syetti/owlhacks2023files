@@ -5,29 +5,22 @@ import axios from 'axios';
 
 function ReadEvents() {
   const [events, setEvents] = useState([]);
-  const searchQuery = 'ADA accessible restroom'; // Your search query
-
-  // Add request interceptor to log requests
-  axios.interceptors.request.use((request) => {
-    console.log('Request:', request);
-    return request;
-  });
-
-  // Add response interceptor to log responses
-  axios.interceptors.response.use((response) => {
-    console.log('Response:', response);
-    return response;
-  });
+  const [adaFilter, setAdaFilter] = useState(false);
+  const [unisexFilter, setUnisexFilter] = useState(false);
 
   useEffect(() => {
-    // Define an async function to fetch ADA accessible toilets with a search query
-    const fetchAccessibleToilets = async () => {
+    // Define an async function to fetch filtered toilets
+    const fetchFilteredToilets = async () => {
       try {
-        const response = await axios.get('https://www.refugerestrooms.org/api/v1/restrooms.json', {
+        const philadelphiaLat = 39.9526; // Replace with actual coordinates
+        const philadelphiaLng = -75.1652; // Replace with actual coordinates
+
+        const response = await axios.get('https://www.refugerestrooms.org/api/v1/restrooms/by_location.json', {
           params: {
-            ada: true, // Filter for ADA accessible toilets
-            query: searchQuery, // Your search query
-            per_page: 50,
+            ada: adaFilter, // Filter for ADA accessible toilets
+            unisex: unisexFilter, // Filter for unisex toilets
+            lat: philadelphiaLat,
+            lng: philadelphiaLng,
           },
         });
 
@@ -42,19 +35,39 @@ function ReadEvents() {
       }
     };
 
-    fetchAccessibleToilets();
-  }, []);
+    fetchFilteredToilets();
+  }, [adaFilter, unisexFilter]); // Add dependencies to re-run the effect when filters change
 
   return (
-    <div className='eventboard'>
-      {events.map((toilet, index) => (
-        <Event
-          key={index}
-          name={toilet.name}
-          description={toilet.description}
-          date={toilet.updated_at} // You can customize this part based on the data structure
-        />
-      ))}
+    <div className='read-events-container'>
+      <div className='filter-options'>
+        <label>
+          ADA Accessible
+          <input
+            type='checkbox'
+            checked={adaFilter}
+            onChange={() => setAdaFilter(!adaFilter)}
+          />
+        </label>
+        <label>
+          Unisex
+          <input
+            type='checkbox'
+            checked={unisexFilter}
+            onChange={() => setUnisexFilter(!unisexFilter)}
+          />
+        </label>
+      </div>
+      <div className='eventboard'>
+        {events.map((toilet, index) => (
+          <Event
+            key={index}
+            name={toilet.name}
+            description={toilet.directions}
+            date={toilet.updated_at}
+          />
+        ))}
+      </div>
     </div>
   );
 }
