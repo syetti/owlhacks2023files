@@ -3,11 +3,8 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const User = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
 
-  if (isLoading) {
-    return <div>Loading ...</div>;
-  }
 
   return (
     isAuthenticated && (
