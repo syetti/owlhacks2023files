@@ -6,6 +6,8 @@ import axios from 'axios';
 function ReadEvents() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [adaFilter, setAdaFilter] = useState(false);
+  const [unisexFilter, setUnisexFilter] = useState(false);
 
   useEffect(() => {
     const searchQuery = 'ADA accessible restroom'; // Your search query
@@ -19,9 +21,8 @@ function ReadEvents() {
 
         const baseUrl = 'https://www.refugerestrooms.org/api/v1/restrooms/by_location';
         const queryParams = {
-          page: 1,
-          per_page: 10,
-          offset: 0,
+          ada : adaFilter,
+          unisex : unisexFilter,
           lat: lat,
           lng: long,
         };
@@ -42,7 +43,7 @@ function ReadEvents() {
       console.error('Geolocation is not supported by your browser.');
       setLoading(false); // Make sure to set loading to false if geolocation is not supported
     }
-  }, []);
+  }, [adaFilter,unisexFilter]);
 
   return (
     <div className='read-events-container'>
