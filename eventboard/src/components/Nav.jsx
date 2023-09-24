@@ -25,7 +25,7 @@ const CustomNav = () => {
   };
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" expand="lg">
       <Container>
         {/* Add the image to your navbar */}
         <img src={logoImage} alt="Logo" className="navbar-logo" />
@@ -34,7 +34,7 @@ const CustomNav = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <Nav.Link href="/" style={{ fontSize: "36px", fontFamily: "Monospace" }}>
+            <Nav.Link href="/" style={{ fontSize: "36px", fontFamily: "Monospace", color: '#FFFFFF'}}>
               CitySquats
             </Nav.Link>
           </Nav>
@@ -44,9 +44,9 @@ const CustomNav = () => {
               <div>
                 <Button
                   onClick={openModal}
-                  variant="outline-light"
+                  variant="outline-dark"
                   style={{
-                    backgroundImage: 'linear-gradient(to left, #553c9a, #6e528a)',
+                    backgroundImage: 'linear-gradient(to left, #007EA7, #007EA7)',
                     color: 'dark'
                   }}
                 >

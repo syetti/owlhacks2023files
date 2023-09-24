@@ -16,7 +16,7 @@
   .filter-options label {
     display: flex;
     align-items: center;
-    border: 2px solid #ffffffb1; /* Border color (adjust as needed) */
+    border: 2px solid #545252; /* Border color (adjust as needed) */
     border-radius: 20px; /* Adjust the radius to make them round */
     padding: 8px 16px; /* Adjust padding as needed */
     margin-right: 10px;

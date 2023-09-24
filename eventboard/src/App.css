@@ -6,6 +6,6 @@
 
 
 .background-gradient {
-  background: linear-gradient(to bottom, #edcffe, #eca2f8, #edcffe);
+  background: linear-gradient(to bottom, #6ebad8, rgb(194, 157, 199), #f3f9fb);
   /* Customize the gradient colors and direction as needed */
 }

@@ -10,8 +10,8 @@ const Login = () => {
     <Button
       onClick={() => loginWithRedirect()}
       style={{
-        background: 'linear-gradient(to left, #553c9a, #b393d3)',
-        color: 'white',
+        backgroundImage: 'linear-gradient(to left, #007EA7, #007EA7)',
+        color: 'dark'
       }}
     >
       Log In
