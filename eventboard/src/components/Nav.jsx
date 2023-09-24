@@ -34,7 +34,17 @@ const CustomNav = () => {
             {!isAuthenticated && <Login />}
             {isAuthenticated && (
               <div>
-                <Button onClick={openModal}>Profile</Button>
+                <Button
+                  onClick={openModal}
+                  style={{
+                    backgroundImage: 'linear-gradient(to left, #553c9a, #b393d3)',
+                    color: 'white'
+                  }}
+                >
+                  Profile
+                </Button>
+
+
                 <Modal
                   isOpen={isModalOpen}
                   onRequestClose={closeModal}

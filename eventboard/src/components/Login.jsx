@@ -6,7 +6,17 @@ import { Button } from "react-bootstrap";
 const Login = () => {
   const { loginWithRedirect } = useAuth0();
 
-  return <Button onClick={() => loginWithRedirect()}>Log In</Button>;
+  return (
+    <Button
+      onClick={() => loginWithRedirect()}
+      style={{
+        background: 'linear-gradient(to left, #553c9a, #b393d3)',
+        color: 'white',
+      }}
+    >
+      Log In
+    </Button>
+  );
 };
 
 export default Login;
