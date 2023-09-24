@@ -27,9 +27,13 @@
     padding: 20px; 
     flex-grow: 1;
   }
+  .distance{
+    padding: 10px;
+  }
   .address{
     font-size: 13px;
   }
+  
 
   .favorite {
     position: relative;
