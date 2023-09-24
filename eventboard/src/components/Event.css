@@ -8,7 +8,9 @@
     margin: 20px;
     padding: 10px;
     width: 300px;
-    height: 400px;
+    height: 459px;
+    display: flex;
+    flex-direction: column;
   }
   
   .name {
@@ -19,12 +21,19 @@
     background-clip: text;
     -webkit-background-clip: text;
   }
+  .map-container {
+    border-radius: 16px;
+    padding: 20px; 
+    flex-grow: 1;
+  }
+  
 
   .favorite {
     position: absolute;
     bottom: 0;
     left: 0;
     padding: 20px; /* Adjust the padding as needed */
+    align-self: flex-end;
   }
 
   .favorite:hover {
