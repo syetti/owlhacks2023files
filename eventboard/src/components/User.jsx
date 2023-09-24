@@ -17,7 +17,7 @@ const User = () => {
           <p>{user.email}</p>
         </div>
         <p>Contribute to the community</p>
-        <Link to="https://www.refugerestrooms.org/restrooms/new">
+        <Link to="https://www.refugerestrooms.org/restrooms/new" target="_blank">
           <Button variant='outline-primary'>Share a new restroom</Button>
         </Link>
         <div className="logout">
