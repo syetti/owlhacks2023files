@@ -34,6 +34,7 @@ const Event = (props) => {
                     />
                 </GoogleMap>
             </LoadScript>
+            <p className="distance">Miles from you: {parseFloat(props.distance).toFixed(2)}</p>
             <div className="favorite">
                 {isFavorited ? (
                 <BookmarkStarFill size={30} onClick={handleFavoriteClick} className="filled" />
@@ -41,7 +42,6 @@ const Event = (props) => {
                 <BookmarkStar size={30} onClick={handleFavoriteClick} />
                 )}
             </div>
-            <p className="distance">Miles from you: {parseFloat(props.distance).toFixed(2)}</p>
         </div>
     )
 

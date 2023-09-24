@@ -81,6 +81,8 @@ function ReadEvents() {
             latitude={toilet.latitude}
             distance={toilet.distance}
             date={toilet.updated_at}
+            isunisex ={toilet.unisex}
+            isAccessible={toilet.accessible} 
           />
         ))}
       </div>
