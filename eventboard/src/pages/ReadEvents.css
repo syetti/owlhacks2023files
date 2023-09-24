@@ -6,23 +6,38 @@
   }
 
   .filter-options {
+    display: flex;
     align-items: center;
-    margin-top: 25px;
+    padding: 10px;
+    margin-left: 150px;
+    margin-top: 20px;
   }
-
   
-  .filter-options input{
-    border-color: #007BFF; /* Blue color */
-    background-color: #007BFF; /* Blue color */
-    margin: 10px;
+  .filter-options label {
+    display: flex;
+    align-items: center;
+    border: 2px solid #007bff; /* Border color (adjust as needed) */
+    border-radius: 20px; /* Adjust the radius to make them round */
+    padding: 8px 16px; /* Adjust padding as needed */
+    margin-right: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s ease; /* Add a smooth transition effect */
   }
   
   .filter-options label:hover {
-    background-color: #f0f0f0; /* Gray hover color */
+    border-color: #007bff; /* Change border color on hover (adjust as needed) */
+    cursor: pointer;
+
   }
   
-  /* Style the text */
-  .filter-options span {
-    flex: 1;
+  .filter-options input {
+    display: none; /* Hide the default checkbox input */
+    margin-right: 8px; /* Add some spacing between the checkbox and label text */
   }
+
+  .filter-options input:checked + label {
+    background-color: #2196F3;
+  }
+
+.UniversalAccess
   

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Event from '../components/Event';
 import './ReadEvents.css';
 import axios from 'axios';
+import { UniversalAccessCircle, GenderTrans } from 'react-bootstrap-icons';
 
 function ReadEvents() {
   const [events, setEvents] = useState([]);
@@ -49,7 +50,8 @@ function ReadEvents() {
   return (
     <div className='read-events-container'>
       <div className='filter-options'>
-        <label>
+        <label style={{ backgroundColor: adaFilter ? '#007bff' : 'transparent', color: adaFilter ? 'white' : 'black', transition: 'background-color 0.3s ease'}}>
+          <UniversalAccessCircle style={{ marginRight: '10px'}}/>
           ADA Accessible
           <input
             type='checkbox'
@@ -57,8 +59,9 @@ function ReadEvents() {
             onChange={() => setAdaFilter(!adaFilter)}
           />
         </label>
-        <label>
-          Unisex
+        <label style={{ backgroundColor: unisexFilter ? '#007bff' : 'transparent', color: unisexFilter ? 'white' : 'black', transition: 'background-color 0.3s ease'     }}>
+          <GenderTrans style={{ marginRight: '10px'}}/>
+        Unisex
           <input
             type='checkbox'
             checked={unisexFilter}
@@ -68,7 +71,6 @@ function ReadEvents() {
       </div>
       <div className='eventboard'>
         {events.map((toilet, index) => (
-            console.log(toilet),
           <Event
             key={index}
             name={toilet.name}
