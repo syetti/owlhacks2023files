@@ -36,13 +36,23 @@ const Event = (props) => {
                 </GoogleMap>
             </LoadScript>
             <p className="distance">Miles from you: {parseFloat(props.distance).toFixed(2)}</p>
-            <div className="favorite">
+            <div>
+            <label style={{ backgroundColor: 'transparent', color: 'black', fontSize: '20px'}}>
+                <UniversalAccessCircle style={{ marginRight: '10px'}}/>
+            </label>
+            <label style={{ backgroundColor: 'transparent', color: 'black', fontSize: '20px' }}>
+    <GenderTrans style={{ marginRight: '10px' }} />
+        </label>
+                {/* <div className="favorite">
                 {isFavorited ? (
                 <BookmarkStarFill size={30} onClick={handleFavoriteClick} className="filled" />
                 ) : (
                 <BookmarkStar size={30} onClick={handleFavoriteClick} />
                 )}
+            </div> */}
             </div>
+            
+            
         </div>
     )
 
