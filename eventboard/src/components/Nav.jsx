@@ -33,7 +33,7 @@ const CustomNav = () => {
         {/* The rest of your navbar code */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="m-auto">
             <Nav.Link href="/">Home</Nav.Link>
           </Nav>
           <Nav className="auth-buttons">
