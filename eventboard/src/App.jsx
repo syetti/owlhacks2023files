@@ -11,7 +11,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"; // Import Brows
 function App() {
   const { isAuthenticated } = useAuth0();
   return (
-      <div className="App">
+      <div className="App background-gradient">
         <Nav />
         <Routes>
           <Route path='/' element={<ReadEvents />} />
