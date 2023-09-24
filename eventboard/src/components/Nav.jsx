@@ -34,7 +34,7 @@ const CustomNav = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/">CitySquats</Nav.Link>
           </Nav>
           <Nav className="auth-buttons">
             {!isAuthenticated && <Login />}
