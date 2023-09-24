@@ -31,7 +31,6 @@ const Event = (props) => {
                 >
                     <Marker
                     position={{lat: props.latitude, lng: props.longitude}}
-                    label="Googleplex"
                     />
                 </GoogleMap>
             </LoadScript>
