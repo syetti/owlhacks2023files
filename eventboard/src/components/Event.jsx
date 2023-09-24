@@ -41,7 +41,7 @@ const Event = (props) => {
                 <BookmarkStar size={30} onClick={handleFavoriteClick} />
                 )}
             </div>
-            <p className="distance">Miles from you: {props.distance}</p>
+            <p className="distance">Miles from you: {parseFloat(props.distance).toFixed(2)}</p>
         </div>
     )
 
