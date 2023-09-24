@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { BookmarkStar, BookmarkStarFill } from 'react-bootstrap-icons';
 import { useState } from "react";
 import{GoogleMap, useLoadScript, Marker, LoadScript} from '@react-google-maps/api';
+import { UniversalAccessCircle, GenderTrans } from 'react-bootstrap-icons';
 
 const Event = (props) => {
 
