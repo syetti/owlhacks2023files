@@ -13,8 +13,11 @@
   
   img {
     width: 100px; /* Adjust the size as needed */
-    border-radius: 50%;
     margin-bottom: 10px;
+  }
+
+  .user-picture{
+    border-radius: 50%;
   }
   
   h2 {

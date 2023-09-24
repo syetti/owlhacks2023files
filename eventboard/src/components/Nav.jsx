@@ -28,7 +28,7 @@ const CustomNav = () => {
     <Navbar bg="dark" expand="lg">
       <Container>
         {/* Add the image to your navbar */}
-        <img src={logoImage} alt="Logo" className="navbar-logo" />
+        <img src={logoImage} alt="Logo" className="navbar-logo" border-radius="50px"/>
 
         {/* The rest of your navbar code */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
