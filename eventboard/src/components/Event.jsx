@@ -41,6 +41,7 @@ const Event = (props) => {
                 <BookmarkStar size={30} onClick={handleFavoriteClick} />
                 )}
             </div>
+            <p className="distance">Miles from you: {props.distance}</p>
         </div>
     )
 

@@ -79,6 +79,7 @@ function ReadEvents() {
             country={toilet.country}
             longitude={toilet.longitude}
             latitude={toilet.latitude}
+            distance={toilet.distance}
             date={toilet.updated_at}
           />
         ))}
