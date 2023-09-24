@@ -47,3 +47,14 @@
     cursor: pointer;
     border:rgba(255, 255, 255, 0.2);
   }
+
+
+  .address{
+    color: black;
+    text-decoration: none;
+  }
+
+  .address:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
