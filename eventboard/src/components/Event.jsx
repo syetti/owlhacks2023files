@@ -21,7 +21,7 @@ const Event = (props) => {
     return (
         <div className="Event">
             <p className="name">{props.name}</p>
-            <a className='link_address' href={`https://www.google.com/maps/search/?api=1&query=${props.name.replace(/ /g, '+')},${props.address.replace(/ /g, '+')},${props.city.replace(/ /g, '+')},${props.country.replace(/ /g, '+')}`} className='address' target='_blank'>{props.address} {props.city}, {props.country}, {props.name}</a>
+            <a href={`https://www.google.com/maps/search/?api=1&query=${props.name.replace(/ /g, '+')},${props.address.replace(/ /g, '+')},${props.city.replace(/ /g, '+')},${props.country.replace(/ /g, '+')}`} className='address' target='_blank'>{props.address} {props.city}, {props.country}, {props.name}</a>
             <p className="cords"></p>
             <LoadScript googleMapsApiKey={import.meta.env.VITE_REACT_APP_MAPS_APP_API_KEY}>
                 
