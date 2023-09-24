@@ -21,6 +21,7 @@ function ReadEvents() {
 
         const baseUrl = 'https://www.refugerestrooms.org/api/v1/restrooms/by_location';
         const queryParams = {
+          per_page: 36,
           ada : adaFilter,
           unisex : unisexFilter,
           lat: lat,
