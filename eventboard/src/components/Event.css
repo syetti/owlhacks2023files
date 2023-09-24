@@ -24,5 +24,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: px; /* Adjust the padding as needed */
+    padding: 20px; /* Adjust the padding as needed */
+  }
+
+  .favorite:hover {
+    cursor: pointer;
+    border:rgba(255, 255, 255, 0.2);
   }
