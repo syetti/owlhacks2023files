@@ -20,22 +20,18 @@ const Event = (props) => {
     return (
         <div className="Event">
             <p className="name">{props.name}</p>
-            <p className='address'>{props.address} {props.city}, {props.country}</p>
-            <div className="map-container">
-                <LoadScript googleMapsApiKey={import.meta.env.VITE_REACT_APP_MAPS_APP_API_KEY}>
-                    <GoogleMap 
-                    mapContainerStyle={containerStyle}
-                    center = {{lat: props.latitude, lng: props.longitude}}
-                    zoom = {13}
-                    
-                    >
-                        <Marker
-                        position={{ lat: props.latitude, lng: props.longitude }}
-                        />
-                    </GoogleMap>
-                </LoadScript>
-            </div>
-            
+            <a href={`https://www.google.com/maps/search/?api=1&query=${props.name.replace(/ /g, '+')},${props.address.replace(/ /g, '+')},${props.city.replace(/ /g, '+')},${props.country.replace(/ /g, '+')}`} className='address' target='_blank'>{props.address} {props.city}, {props.country}, {props.name}</a>
+            <p className="cords"></p>
+            <LoadScript googleMapsApiKey={import.meta.env.VITE_REACT_APP_MAPS_APP_API_KEY}>
+                
+                <GoogleMap 
+                mapContainerStyle={containerStyle}
+                center = {{lat: props.latitude, lng: props.longitude}}
+                zoom = {13}
+                
+                >
+                </GoogleMap>
+            </LoadScript>
             <div className="favorite">
                 {isFavorited ? (
                 <BookmarkStarFill size={30} onClick={handleFavoriteClick} className="filled" />
