@@ -67,10 +67,15 @@ function ReadEvents() {
       </div>
       <div className='eventboard'>
         {events.map((toilet, index) => (
+            console.log(toilet),
           <Event
             key={index}
             name={toilet.name}
-            description={toilet.directions}
+            address={toilet.street}
+            city={toilet.city}
+            country={toilet.country}
+            longitude={toilet.longitude}
+            latitude={toilet.latitude}
             date={toilet.updated_at}
           />
         ))}

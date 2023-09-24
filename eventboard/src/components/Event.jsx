@@ -12,10 +12,12 @@ const Event = (props) => {
         setIsFavorited(!isFavorited);
     };
 
+
     return (
         <div className="Event">
             <p className="name">{props.name}</p>
-
+            <p className='address'>{props.address} {props.city}, {props.country}</p>
+            <p className="cords">{props.longitude} {props.latitude}</p>
             <div className="favorite">
                 {isFavorited ? (
                 <BookmarkStarFill size={30} onClick={handleFavoriteClick} className="filled" />
