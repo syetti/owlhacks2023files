@@ -28,8 +28,11 @@ const Event = (props) => {
                 mapContainerStyle={containerStyle}
                 center = {{lat: props.latitude, lng: props.longitude}}
                 zoom = {13}
-                
                 >
+                    <Marker
+                    position={{lat: props.latitude, lng: props.longitude}}
+                    label="Googleplex"
+                    />
                 </GoogleMap>
             </LoadScript>
             <div className="favorite">
