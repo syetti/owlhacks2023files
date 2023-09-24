@@ -9,6 +9,9 @@ import Modal from "react-modal";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import "./Nav.css"; // Create a CSS file for your custom styles
 
+// Import your image
+import logoImage from "../images/toilet.jpg"; // Replace with the actual path to your image
+
 const CustomNav = () => {
   const { isAuthenticated } = useAuth0();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +27,10 @@ const CustomNav = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="/">Philly Uni Events</Navbar.Brand>
+        {/* Add the image to your navbar */}
+        <img src={logoImage} alt="Logo" className="navbar-logo" />
+
+        {/* The rest of your navbar code */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
