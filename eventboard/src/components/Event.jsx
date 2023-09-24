@@ -27,7 +27,7 @@ const Event = (props) => {
                 <GoogleMap 
                 mapContainerStyle={containerStyle}
                 center = {{lat: props.latitude, lng: props.longitude}}
-                zoom = {13}
+                zoom = {14}
                 >
                     <Marker
                     position={{lat: props.latitude, lng: props.longitude}}
