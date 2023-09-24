@@ -1,0 +1,42 @@
+.user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  img {
+    width: 100px; /* Adjust the size as needed */
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  Button {
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .link-button {
+    margin-top: 20px;
+  }
+
+  .logout {
+    margin: 100px;
+  }
+  

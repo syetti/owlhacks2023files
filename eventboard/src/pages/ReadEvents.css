@@ -7,4 +7,22 @@
 
   .filter-options {
     align-items: center;
+    margin-top: 25px;
   }
+
+  
+  .filter-options input{
+    border-color: #007BFF; /* Blue color */
+    background-color: #007BFF; /* Blue color */
+    margin: 10px;
+  }
+  
+  .filter-options label:hover {
+    background-color: #f0f0f0; /* Gray hover color */
+  }
+  
+  /* Style the text */
+  .filter-options span {
+    flex: 1;
+  }
+  

@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import Login from "./Login";
-import User from "./User";
 import Logout from "./Logout";
-import { Nav, Navbar, Container, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import User from "./User";
+import Modal from "react-modal";
+import { Nav, Navbar, Container } from "react-bootstrap";
+import "./Nav.css"; // Create a CSS file for your custom styles
 
 const CustomNav = () => {
   const { isAuthenticated } = useAuth0();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <Navbar bg="light" expand="lg">
@@ -19,7 +32,19 @@ const CustomNav = () => {
           </Nav>
           <Nav className="auth-buttons">
             {!isAuthenticated && <Login />}
-            {isAuthenticated && <Nav.Link href="/user">Profile</Nav.Link>}
+            {isAuthenticated && (
+              <div>
+                <Button onClick={openModal}>Profile</Button>
+                <Modal
+                  isOpen={isModalOpen}
+                  onRequestClose={closeModal}
+                  contentLabel="User Profile"
+                  className="custom-modal" // Apply the custom-modal class
+                >
+                  <User />
+                </Modal>
+              </div>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

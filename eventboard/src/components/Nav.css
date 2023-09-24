@@ -1,0 +1,13 @@
+.custom-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px; /* Adjust the width to your preference */
+    height: 500px; /* Adjust the height to your preference */
+    background: #fff; /* Background color */
+    border: 1px solid #ccc; /* Add a border if desired */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 25px;
+  }
+  
