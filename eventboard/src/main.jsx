@@ -8,11 +8,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const auth0Domain = import.meta.env.VITE_AUTH0_DOMAIN;
+const auth0ClientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
+
 root.render(
   <BrowserRouter>
   <Auth0Provider
-    domain={'dev-vp7ygbq2mu6t7xxn.us.auth0.com'}
-    clientId={'274v0emN8m87Kwow1lkgF650ZsnMBUOG'}
+    domain={auth0Domain}
+    clientId={auth0ClientId}
     authorizationParams={{
       redirect_uri: window.location.origin
     }}
