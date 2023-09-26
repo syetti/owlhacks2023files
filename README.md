@@ -1,7 +1,10 @@
-# owlhacks2023FallFiles
-# Made by hackathon group, BitBoys
+# [CitySquats 🚽](https://citysquats.netlify.app/)
+# [Temple University Fall 2023 Hackathon Winners 🦉🍒](https://devpost.com/software/citysquats?ref_content=user-portfolio&ref_feature=in_progress)  
+*Best Smart City Hack 🏙️*
+
+*Best Accessibility Hack :accessibility: - sponsored by Fidelity*
 ## Inspiration
-Our inspirations were the educational accessibility and city tracks. We combined the two to specifically focus on making our cities more accessible. On our latest trip to **NYC**, we had a difficult time finding a restroom in the busy streets of *Manhattan*. It was only then that we realized how difficult it was to find an accessible restroom when you might understand the ins and outs of the city buildings. We wanted to make finding an accessible restroom safer and more accessible to the average tourist or city resident.  
+Our inspirations were the educational accessibility and city tracks. We combined the two to specifically focus on making our cities more accessible. On our latest trip to **NYC**, we had a difficult time finding a restroom in the busy streets of *Manhattan*. It was only then that we realized how difficult it was to find an accessible restroom when you might understand the ins and outs of the city buildings. We wanted to make finding an accessible restroom safer and more accessible to the average tourist or city resident.
 ## What it does
 Our app provides the user with nearby bathrooms and lets them filter the nearby bathrooms by **ADA** (Americans with Disabilities Act) compliance and gender-inclusivity. We provide our users a map with a pinpoint of the bathroom's location, the building's name, directions to the bathroom, and how far away they are in miles.
 
